@@ -309,33 +309,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#frequently-unasked-questions" class="md-nav__link">
-    Frequently (Un)Asked Questions
-  </a>
-  
-    <nav class="md-nav" aria-label="Frequently (Un)Asked Questions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i-forgot-my-password-can-you-help-me-recover-it" class="md-nav__link">
-    I forgot my password, can you help me recover it?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#i-dont-like-your-service-can-i-speak-to-the-manager" class="md-nav__link">
-    I don't like your service, can I speak to the manager?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -445,33 +418,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#frequently-unasked-questions" class="md-nav__link">
-    Frequently (Un)Asked Questions
-  </a>
-  
-    <nav class="md-nav" aria-label="Frequently (Un)Asked Questions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i-forgot-my-password-can-you-help-me-recover-it" class="md-nav__link">
-    I forgot my password, can you help me recover it?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#i-dont-like-your-service-can-i-speak-to-the-manager" class="md-nav__link">
-    I don't like your service, can I speak to the manager?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -502,12 +448,15 @@ You should not have to trust your cloud provider to protect your own data - whet
 We believe the best way to achieve this is by embedding end-to-end cryptography into your applications - allowing you to securely store, manage and share mission-critical secrets.</p>
 <h2 id="overview">Overview</h2>
 <p>Backbone is an enriched key-value store with enterprise capabilities designed for maximum security. We could get thoroughly pwned <a href="https://xkcd.com/538/">XKCD #538</a> style and, so long as you keep a few pieces of information secure, our adversaries would be able to recover none of your data (unless they've broken ECC, in which case you have bigger problems to worry about).
-At the most fundamental level, Backbone is a collection of <code>workspaces</code>. Workspaces in turn are collections of <code>users</code> and act as the largest units of control and isolation in Backbone; all actions you perform occur inside a <code>workspace</code> and there are no cross-workspace interaction of any kind (until we find a way to monetise them).
-Workspaces are controlled by a subset of their users: those with <code>root</code> permissions. Don't worry about permissions for now, <del>it's not like you'll ever bother to drop your root permissions</del> we'll explain them later. The key point to remember is that <code>workspaces</code> consist of <code>users</code> some of whom can manage the workspace and invite other users to it.
-Once you've got your workspace and your users set up, you probably feel like an <del>idiot</del> excited prospective customer because you can't do anything with them. But fear not, Backbone has an exceptionally powerful key-value <code>store</code> that you can use as a marginally better alternative to pastebin.
+At the most fundamental level, Backbone is a collection of <code>workspaces</code>. </p>
+<p>Workspaces in turn are collections of <code>users</code> and act as the largest units of control and isolation in Backbone; all actions you perform occur inside a <code>workspace</code> and there are no cross-workspace interaction of any kind (until we find a way to monetise them).
+Workspaces are controlled by a subset of their users: those with <code>root</code> permissions. Don't worry about permissions for now, <del>it's not like you'll ever bother to drop your root permissions</del> we'll explain them later. The key point to remember is that <code>workspaces</code> consist of <code>users</code> some of whom can manage the workspace and invite other users to it.</p>
+<p>Once you've got your workspace and your users set up, you probably feel like an <del>idiot</del> excited prospective customer because you can't do anything with them. But fear not, Backbone has an exceptionally powerful key-value <code>store</code> that you can use as a marginally better alternative to pastebin.
 The store consists of two types of objects: <code>entries</code> and <code>namespaces</code>. You can think of entries as files in a filesystem and namespaces are directories. We motivate you to be efficient with your storage by limiting the maximum size of your "files" to 2,048 bytes. You can thank us later.
-Once you've created some entries and namespaces, you probably want to share them with your friends so they can access your email address, bank account and Dunkin Donuts subscription. With Backbone, you can destroy your life in this way with a single command and no confirmation prompts.
-The best part is that, because we're in alpha, you don't even have to pay us for the privilege, that comes later. Rest assured that when we <del>achieve massive scale</del> increase user counts to lower costs, we will <del>jack up our prices to the moon</del> extend generous offers to our early subscribers, like true capitalists.</p>
+Once you've created some entries and namespaces, you probably want to share them with your friends so they can access your email address, bank account and Dunkin Donuts subscription. </p>
+<p>With Backbone, you can destroy your life in this way with a single command and no confirmation prompts.
+The best part is that, because we're in alpha, you don't even have to pay us for the privilege, that comes later. </p>
+<p>Rest assured that when we <del>achieve massive scale</del> increase user counts to lower costs, we will <del>jack up our prices to the moon</del> extend generous offers to our early subscribers, like true capitalists.</p>
 <h3 id="installation">Installation</h3>
 <p>The best way to get your hands or other non-primate appendages on Backbone is to install the <code>backbone</code> package with your favourite Python package manager unless it's conda.</p>
 <p>This will install both the client library as well as the <code>backbone</code> command-line interface.</p>
@@ -714,10 +663,10 @@ This is the process of proving that you own your private key or password. If suc
 </code></pre></div>
 </div>
 </div>
-<h2 id="frequently-unasked-questions">Frequently (Un)Asked Questions</h2>
-<h3 id="i-forgot-my-password-can-you-help-me-recover-it">I forgot my password, can you help me recover it?</h3>
+<h4 id="frequently-unasked-questions">Frequently (Un)Asked Questions</h4>
+<h5 id="i-forgot-my-password-can-you-help-me-recover-it">I forgot my password, can you help me recover it?</h5>
 <p>This is a significant improvement to your security posture. Here's your star: ⭐.</p>
-<h3 id="i-dont-like-your-service-can-i-speak-to-the-manager">I don't like your service, can I speak to the manager?</h3>
+<h5 id="i-dont-like-your-service-can-i-speak-to-the-manager">I don't like your service, can I speak to the manager?</h5>
 <p>Yes, please reach out to devnull@backbone.dev and we'll be happy to discard your message.</p>
                 
                   
