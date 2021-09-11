@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "backbone-docs"
+version = "0.1.0"
+description = ""
+authors = ["David Al Mjali <david.al.mjali@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+mkdocs-material = "^7.2.6"
+Markdown = "^3.3.4"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

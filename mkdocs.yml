@@ -1,0 +1,40 @@
+site_name: Backbone
+theme:
+  name: material
+  language: en
+  icon:
+    logo: material/lock-outline
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+  features:
+    - navigation.instant
+    - navigation.sections
+    - search.suggest
+markdown_extensions:
+  - admonition
+  - def_list
+  - meta
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - toc:
+      toc_depth: 3
+plugins:
+  - search:
+      lang:
+        - en
+nav:
+  - Backbone Documentation: index.md
