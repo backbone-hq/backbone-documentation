@@ -440,12 +440,12 @@
 If you're feeling adventurous, feel free to join our <a href="https://join.slack.com/t/backbone-dev/shared_invite/zt-rx3gxw5h-87SNvKVte8lEZN3GeNe4vw"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 15a2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2h2v2m1 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v5a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-5m2-8a2 2 0 0 1-2-2 2 2 0 0 1 2-2 2 2 0 0 1 2 2v2H9m0 1a2 2 0 0 1 2 2 2 2 0 0 1-2 2H4a2 2 0 0 1-2-2 2 2 0 0 1 2-2h5m8 2a2 2 0 0 1 2-2 2 2 0 0 1 2 2 2 2 0 0 1-2 2h-2v-2m-1 0a2 2 0 0 1-2 2 2 2 0 0 1-2-2V5a2 2 0 0 1 2-2 2 2 0 0 1 2 2v5m-2 8a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2h2m0-1a2 2 0 0 1-2-2 2 2 0 0 1 2-2h5a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-5z"/></svg></span> Slack Community</a> to provide feedback and help improve Backbone!</p>
 </div>
 <p>Security experts often discuss the tradeoffs between security and usability. 
-We believe you shouldn't have to relinquish the tangible benefits of cloud infrastructure.
-Our answer is Backbone, an end-to-end encrypted key-value store giving you all the benefits of cloud infrastructure, with almost none of the risk.</p>
+We believe this is a false dichotomy; you can achieve both without having to relinquish the tangible benefits of cloud infrastructure.
+We therefore present Backbone, an end-to-end encrypted key-value store.</p>
 <p>Backbone's aim is to ensure that the only entity you have to trust is yourself. 
-You should not have to trust your cloud provider to protect your own data - whether from foreign governments, cyber criminals or themselves.</p>
+You should not have to trust your cloud provider to protect your data - whether from foreign governments, cyber criminals or themselves.</p>
 <p>Backbone makes it possible to securely use third-party hardware for storage with cryptographically-guaranteed granular access control.
-We believe the best way to achieve this is by embedding end-to-end cryptography into your applications - allowing you to securely store, manage and share mission-critical secrets.</p>
+We believe embedding end-to-end cryptography into your applications is the way of the future - the way to securely store mission-critical secrets.</p>
 <h2 id="overview">Overview</h2>
 <p>Backbone is an enriched key-value store with enterprise capabilities designed for maximum security. We could get thoroughly pwned <a href="https://xkcd.com/538/">XKCD #538</a> style and, so long as you keep a few pieces of information secure, our adversaries would be able to recover none of your data (unless they've broken ECC, in which case you have bigger problems to worry about).
 At the most fundamental level, Backbone is a collection of <code>workspaces</code>. </p>
@@ -458,7 +458,7 @@ Once you've created some entries and namespaces, you probably want to share them
 The best part is that, because we're in alpha, you don't even have to pay us for the privilege, that comes later. </p>
 <p>Rest assured that when we <del>achieve massive scale</del> increase user counts to lower costs, we will <del>jack up our prices to the moon</del> extend generous offers to our early subscribers, like true capitalists.</p>
 <h3 id="installation">Installation</h3>
-<p>The best way to get your hands or other non-primate appendages on Backbone is to install the <code>backbone</code> package with your favourite Python package manager unless it's conda.</p>
+<p>The best way to get your hands on Backbone is to install the <code>backbone</code> package with your favourite Python package manager.</p>
 <p>This will install both the client library as well as the <code>backbone</code> command-line interface.</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Python: pip</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>pip install backbone
@@ -470,9 +470,9 @@ The best part is that, because we're in alpha, you don't even have to pay us for
 </div>
 </div>
 <h3 id="initialization">Initialization</h3>
-<p>The backbone ecosystem revolves around the concept of workspaces. Your applications, friends and users will all be part of your workspace.</p>
+<p>The backbone ecosystem revolves around the concept of workspaces. Your applications, friends and users and their pets will all be part of your workspace.</p>
 <div class="admonition note">
-<p>The account you create alongside your workspace will be granted <code>ROOT</code> permissions by default</p>
+<p>The user you create during initialization will automatically be granted <code>ROOT</code> permissions; Every workspace must always have at least one <code>ROOT</code> user.</p>
 </div>
 <h4 id="private-keys">Private Keys</h4>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Python</label><div class="tabbed-content">
@@ -488,7 +488,8 @@ The best part is that, because we're in alpha, you don't even have to pay us for
 </div>
 </div>
 <h4 id="passwords">Passwords</h4>
-<p>Backbone supports using passwords for convenience. If you do intend to use a password, please make sure that its entropy is sufficient under your threat model.</p>
+<p>Backbone supports using passwords for convenience. If you intend to use a password instead of a private key, we strongly recommend that its entropy is sufficient under your threat model.
+Using passwords intentionally incurs a performance hit to discourage brute-force attacks.</p>
 <div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Python</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">backbone.sync</span> <span class="kn">import</span> <span class="n">BackboneClient</span>
 
@@ -517,7 +518,8 @@ This is the process of proving that you own your private key or password. If suc
 </div>
 </div>
 <h3 id="storage">Storage</h3>
-<p>Truly evil megacorps maintain their control over society using the invisible hand of commerce. Others stash their profits in offshore tax havens. The truly benevolent corporations only make you pay a montly fee for something you could get with a free hard drive from Gumtree but with inferior data integrity assurances. Don't think of your data loss as a failure, think of it as fun. Don't think of our practises as consumer exploitation, think of them as consumer... fun!</p>
+<p>Secure storage is the heart of your backbone - though that's certainly not anatomically correct. The store is a tree; whereby the root namespace (with a prefix of <code>`) is the de-facto owner of all child resources.
+Users can then be granted access to a resource and inherit access to resources owned by their namespaces via a</code>chain`.</p>
 <h4 id="accessing-entries">Accessing entries</h4>
 <div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Python</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="n">client</span><span class="o">.</span><span class="n">entry</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
@@ -591,12 +593,32 @@ This is the process of proving that you own your private key or password. If suc
 <h3 id="data-access-control">Data Access Control</h3>
 <p>We're told sharing is caring. Just make sure not to invite the fox into the henhouse.</p>
 <p>Access control within Backbone is separated into a variety of types:</p>
-<ul>
-<li>READ</li>
-<li>WRITE</li>
-<li>DELETE</li>
-<li>EJECT</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Access</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>READ</td>
+<td>Ability to read a resource's value</td>
+</tr>
+<tr>
+<td>WRITE</td>
+<td>Ability to create or modify a resource</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>Ability to remove a resource</td>
+</tr>
+<tr>
+<td>EJECT</td>
+<td>Ability to interrupt the inheritance of grants for a namespace</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
 <p class="admonition-title">Endpoint control</p>
 <p>Only users with the <code>STORE_SHARE</code> permission can share entries and namespace with other users</p>
@@ -653,7 +675,7 @@ This is the process of proving that you own your private key or password. If suc
 </tbody>
 </table>
 <h3 id="isolated-namespaces">Isolated Namespaces</h3>
-<p>Isolation is a mechanism to interrupt the inheritance of permissions from higher namespaces. It requires the ownership of <code>EJECT</code> access to the higher namespace and will result in a namespace where the initial creator is the sole owner of that namespace.</p>
+<p>Isolation is a mechanism to interrupt the inheritance of grants from higher namespaces. It requires the ownership of <code>EJECT</code> access to the higher namespace and will result in a namespace where the initial creator is the sole owner of that namespace.</p>
 <div class="tabbed-set" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><label for="__tabbed_14_1">Python</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="n">client</span><span class="o">.</span><span class="n">namespace</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">isolated</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
@@ -663,10 +685,15 @@ This is the process of proving that you own your private key or password. If suc
 </code></pre></div>
 </div>
 </div>
-<h4 id="frequently-unasked-questions">Frequently (Un)Asked Questions</h4>
-<h5 id="i-forgot-my-password-can-you-help-me-recover-it">I forgot my password, can you help me recover it?</h5>
-<p>This is a significant improvement to your security posture. Here's your star: ⭐.</p>
-<h5 id="i-dont-like-your-service-can-i-speak-to-the-manager">I don't like your service, can I speak to the manager?</h5>
+<h4 id="frequently-asked-questions">Frequently Asked Questions</h4>
+<blockquote>
+<p>I forgot my password, can you help me recover it?</p>
+</blockquote>
+<p>This is a significant improvement to your security posture. You are no longer susceptible to <a href="https://xkcd.com/538/">XKCD #538</a>.
+While Backbone is in alpha, this is not an issue; you will not be charged or prosecuted.</p>
+<blockquote>
+<p>I don't like your service, can I speak to the manager?</p>
+</blockquote>
 <p>Yes, please reach out to devnull@backbone.dev and we'll be happy to discard your message.</p>
                 
                   
