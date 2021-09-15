@@ -6,7 +6,7 @@ hide:
 ## Motivation 
 
 !!! Note "Alpha-grade software"
-    Backbone is being battle-tested and **should not be used in production**. If you deploy an app using Backbone, kittens will very likely die. You should assume that all data uploaded could disappear at any time, for any reason, and especially when you need it. This makes Backbone the perfect place to test out novel Error Correction Code techniques.
+    Backbone is being battle-tested and **should not be used in production or to deploying nuclear weapons**. If you deploy anything using Backbone, kittens will very likely die. You should assume that all data uploaded could disappear at any time, for any reason, and especially when you need it. This makes Backbone the perfect place to test out novel Error Correction Code techniques.
     If you're feeling adventurous, feel free to join our [:material-slack: Slack Community](https://join.slack.com/t/backbone-dev/shared_invite/zt-rx3gxw5h-87SNvKVte8lEZN3GeNe4vw) to provide feedback and help improve Backbone!
 
 Security experts often discuss the tradeoffs between security and usability. 
@@ -17,7 +17,7 @@ Backbone's aim is to ensure that the only entity you have to trust is yourself.
 You should not have to trust your cloud provider to protect your data - whether from foreign governments, cyber criminals or themselves.
 
 Backbone makes it possible to securely use third-party hardware for storage with cryptographically-guaranteed granular access control.
-We believe embedding end-to-end cryptography into your applications is the way of the future - the way to securely store mission-critical secrets.
+We believe embedding end-to-end cryptography into your applications is the ideal way to securely store, manage and share mission-critical secrets.
 
 ## Overview
 
@@ -38,7 +38,7 @@ Rest assured that when we ~~achieve massive scale~~ increase user counts to lowe
 
 ### Installation
 
-The best way to get your hands on Backbone is to install the `backbone` package with your favourite Python package manager.
+The best way to get your hands on Backbone is to install the `backbone` package with your favourite Python package manager - unless it's conda.
 
 This will install both the client library as well as the `backbone` command-line interface.
 
@@ -49,6 +49,11 @@ This will install both the client library as well as the `backbone` command-line
 === "Python: poetry"
     ```
     poetry add backbone
+    ```
+=== "Python: conda"
+    ```
+    conda install anaconda-clean && anaconda-clean --yes
+    $(command -v chrome firefox) https://python-poetry.org/docs/#installation
     ```
 
 ### Initialization

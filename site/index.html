@@ -436,7 +436,7 @@
                 <h2 id="motivation">Motivation</h2>
 <div class="admonition note">
 <p class="admonition-title">Alpha-grade software</p>
-<p>Backbone is being battle-tested and <strong>should not be used in production</strong>. If you deploy an app using Backbone, kittens will very likely die. You should assume that all data uploaded could disappear at any time, for any reason, and especially when you need it. This makes Backbone the perfect place to test out novel Error Correction Code techniques.
+<p>Backbone is being battle-tested and <strong>should not be used in production or to deploying nuclear weapons</strong>. If you deploy anything using Backbone, kittens will very likely die. You should assume that all data uploaded could disappear at any time, for any reason, and especially when you need it. This makes Backbone the perfect place to test out novel Error Correction Code techniques.
 If you're feeling adventurous, feel free to join our <a href="https://join.slack.com/t/backbone-dev/shared_invite/zt-rx3gxw5h-87SNvKVte8lEZN3GeNe4vw"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 15a2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2h2v2m1 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v5a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-5m2-8a2 2 0 0 1-2-2 2 2 0 0 1 2-2 2 2 0 0 1 2 2v2H9m0 1a2 2 0 0 1 2 2 2 2 0 0 1-2 2H4a2 2 0 0 1-2-2 2 2 0 0 1 2-2h5m8 2a2 2 0 0 1 2-2 2 2 0 0 1 2 2 2 2 0 0 1-2 2h-2v-2m-1 0a2 2 0 0 1-2 2 2 2 0 0 1-2-2V5a2 2 0 0 1 2-2 2 2 0 0 1 2 2v5m-2 8a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2h2m0-1a2 2 0 0 1-2-2 2 2 0 0 1 2-2h5a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-5z"/></svg></span> Slack Community</a> to provide feedback and help improve Backbone!</p>
 </div>
 <p>Security experts often discuss the tradeoffs between security and usability. 
@@ -445,7 +445,7 @@ We therefore present Backbone, an end-to-end encrypted key-value store.</p>
 <p>Backbone's aim is to ensure that the only entity you have to trust is yourself. 
 You should not have to trust your cloud provider to protect your data - whether from foreign governments, cyber criminals or themselves.</p>
 <p>Backbone makes it possible to securely use third-party hardware for storage with cryptographically-guaranteed granular access control.
-We believe embedding end-to-end cryptography into your applications is the way of the future - the way to securely store mission-critical secrets.</p>
+We believe embedding end-to-end cryptography into your applications is the ideal way to securely store, manage and share mission-critical secrets.</p>
 <h2 id="overview">Overview</h2>
 <p>Backbone is an enriched key-value store with enterprise capabilities designed for maximum security. We could get thoroughly pwned <a href="https://xkcd.com/538/">XKCD #538</a> style and, so long as you keep a few pieces of information secure, our adversaries would be able to recover none of your data (unless they've broken ECC, in which case you have bigger problems to worry about).
 At the most fundamental level, Backbone is a collection of <code>workspaces</code>. </p>
@@ -458,14 +458,19 @@ Once you've created some entries and namespaces, you probably want to share them
 The best part is that, because we're in alpha, you don't even have to pay us for the privilege, that comes later. </p>
 <p>Rest assured that when we <del>achieve massive scale</del> increase user counts to lower costs, we will <del>jack up our prices to the moon</del> extend generous offers to our early subscribers, like true capitalists.</p>
 <h3 id="installation">Installation</h3>
-<p>The best way to get your hands on Backbone is to install the <code>backbone</code> package with your favourite Python package manager.</p>
+<p>The best way to get your hands on Backbone is to install the <code>backbone</code> package with your favourite Python package manager - unless it's conda.</p>
 <p>This will install both the client library as well as the <code>backbone</code> command-line interface.</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Python: pip</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Python: pip</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>pip install backbone
 </code></pre></div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Python: poetry</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>poetry add backbone
+</code></pre></div>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Python: conda</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>conda install anaconda-clean &amp;&amp; anaconda-clean --yes
+$(command -v chrome firefox) https://python-poetry.org/docs/#installation
 </code></pre></div>
 </div>
 </div>
