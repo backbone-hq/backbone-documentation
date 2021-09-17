@@ -6,7 +6,7 @@ hide:
 ## Motivation 
 
 !!! Note "Alpha-grade software"
-    Backbone is being battle-tested and **should not be used in production or to deploying nuclear weapons**. If you deploy anything using Backbone, kittens will very likely die. You should assume that all data uploaded could disappear at any time, for any reason, and especially when you need it. This makes Backbone the perfect place to test out novel Error Correction Code techniques.
+    Backbone is being battle-tested and **should not be used in production**. If you deploy anything using Backbone, kittens will very likely die. You should assume that all data uploaded could disappear at any time, for any reason, and especially when you need it. This makes Backbone the perfect place to test out novel Error Correction Code techniques.
     If you're feeling adventurous, feel free to join our [:material-slack: Slack Community](https://join.slack.com/t/backbone-dev/shared_invite/zt-rx3gxw5h-87SNvKVte8lEZN3GeNe4vw) to provide feedback and help improve Backbone!
 
 Security experts often discuss the tradeoffs between security and usability. 
